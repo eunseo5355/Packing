@@ -32,8 +32,14 @@ class DataManager {
         save()
     }
     
-    func deleteCategory() {
-        
+    func deleteCategory(_ placeIndex: Int, _ categoryIndex: Int) {
+        placeList[placeIndex].category.remove(at: categoryIndex)
+        save()
+    }
+    
+    func editCategoryTitle(_ placeIndex: Int, _ categoryIndex: Int, title: String) {
+        placeList[placeIndex].category[categoryIndex].title = title
+        save()
     }
     
     func addItem(_ placeIndex: Int, _ categoryIndex: Int, title: String) {

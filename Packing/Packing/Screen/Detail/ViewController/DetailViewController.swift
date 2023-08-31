@@ -58,8 +58,13 @@ class DetailViewController: UIViewController {
     private func setupTableView() {
         luggageTableView.dataSource = self
         luggageTableView.delegate = self
-        let nib = UINib(nibName: LuggageTableViewCell.identifier, bundle: nil)
-        luggageTableView.register(nib, forCellReuseIdentifier: LuggageTableViewCell.identifier)
+        
+        let cellNib = UINib(nibName: LuggageTableViewCell.identifier, bundle: nil)
+        luggageTableView.register(cellNib, forCellReuseIdentifier: LuggageTableViewCell.identifier)
+        
+        let headerNib = UINib(nibName: LuggageHeaderView.identifier, bundle: nil)
+        luggageTableView.register(headerNib, forHeaderFooterViewReuseIdentifier: LuggageHeaderView.identifier)
+        
         let footerNib = UINib(nibName: LuggageFooterView.identifier, bundle: nil)
         luggageTableView.register(footerNib, forHeaderFooterViewReuseIdentifier: LuggageFooterView.identifier)
     }
@@ -116,7 +121,7 @@ class DetailViewController: UIViewController {
         present(alert, animated: true)
     }
     
-    private func editItem(_ title: String, _ indexPath: IndexPath, _ cell: LuggageTableViewCell) {
+    private func edit(_ title: String, editHandler: @escaping (() -> ()), deleteHandler: @escaping (() -> ())) {
         guard let editViewController = UIStoryboard(name: EditViewController.identifier, bundle: nil).instantiateViewController(withIdentifier: EditViewController.identifier) as? EditViewController
         else { return }
         editViewController.modalPresentationStyle = .pageSheet
@@ -133,15 +138,14 @@ class DetailViewController: UIViewController {
         
         editViewController.setTitle(item: title)
         editViewController.touchedDeleteButton = {
-            self.dataManager.deleteItem(self.placeIndex, indexPath.section, indexPath.row)
-            self.luggageTableView.deleteRows(at: [indexPath], with: .fade)
+            deleteHandler()
             editViewController.dismiss(animated: true) {
                 self.luggageTableView.reloadData()
             }
         }
         editViewController.touchedEditButton = {
             editViewController.dismiss(animated: true)
-            cell.editTextField()
+            editHandler()
         }
     }
 
@@ -152,10 +156,6 @@ class DetailViewController: UIViewController {
 extension DetailViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return dataManager.placeList[self.placeIndex].category.count
-    }
-    
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return dataManager.placeList[self.placeIndex].category[section].title
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -175,7 +175,13 @@ extension DetailViewController: UITableViewDataSource {
         }
         
         cell.touchedMoreButton = { itemTitle in
-            self.editItem(itemTitle, indexPath, cell)
+            self.edit(itemTitle) {
+                cell.editTextField()
+            } deleteHandler: {
+                self.dataManager.deleteItem(self.placeIndex, indexPath.section, indexPath.row)
+                self.luggageTableView.deleteRows(at: [indexPath], with: .fade)
+            }
+
         }
         
         cell.didEndEditing = { itemTitel in
@@ -198,6 +204,35 @@ extension DetailViewController: UITableViewDataSource {
 //MARK: - UITableViewDelegate
 
 extension DetailViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        guard let headerView = luggageTableView.dequeueReusableHeaderFooterView(withIdentifier: LuggageHeaderView.identifier) as? LuggageHeaderView
+        else { return nil }
+        
+        headerView.setup(category: dataManager.placeList[placeIndex].category[section].title)
+        
+        headerView.touchedEditButton = { categoryTitle in
+            self.edit(categoryTitle) {
+                headerView.editTextField()
+            } deleteHandler: {
+                self.dataManager.deleteCategory(self.placeIndex, section)
+                self.luggageTableView.deleteSections([section], with: .fade)
+            }
+
+        }
+        
+        headerView.didEndEditing = { categoryTitle in
+            if categoryTitle.isEmpty {
+                self.dataManager.deleteCategory(self.placeIndex, section)
+                self.luggageTableView.deleteSections([section], with: .fade)
+            } else {
+                self.dataManager.editCategoryTitle(self.placeIndex, section, title: categoryTitle)
+            }
+            self.luggageTableView.reloadData()
+        }
+        
+        return headerView
+    }
+    
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         guard let footerView = luggageTableView.dequeueReusableHeaderFooterView(withIdentifier: LuggageFooterView.identifier) as? LuggageFooterView
         else { return nil }

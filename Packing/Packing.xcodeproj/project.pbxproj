@@ -20,6 +20,8 @@
 		E27F9FBE2AA0A9C300C48C28 /* LuggageFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E27F9FBD2AA0A9C300C48C28 /* LuggageFooterView.xib */; };
 		E27F9FC42AA107F400C48C28 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27F9FC32AA107F400C48C28 /* EditViewController.swift */; };
 		E27F9FC62AA1083F00C48C28 /* EditViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E27F9FC52AA1083F00C48C28 /* EditViewController.storyboard */; };
+		E27F9FC92AA1163C00C48C28 /* LuggageHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27F9FC82AA1163C00C48C28 /* LuggageHeaderView.swift */; };
+		E27F9FCB2AA1165400C48C28 /* LuggageHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E27F9FCA2AA1165400C48C28 /* LuggageHeaderView.xib */; };
 		E2BC7E0D2A9A075A00D54B82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BC7E0C2A9A075A00D54B82 /* AppDelegate.swift */; };
 		E2BC7E0F2A9A075A00D54B82 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BC7E0E2A9A075A00D54B82 /* SceneDelegate.swift */; };
 		E2BC7E192A9A075B00D54B82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2BC7E182A9A075B00D54B82 /* Assets.xcassets */; };
@@ -41,6 +43,8 @@
 		E27F9FBD2AA0A9C300C48C28 /* LuggageFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LuggageFooterView.xib; sourceTree = "<group>"; };
 		E27F9FC32AA107F400C48C28 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		E27F9FC52AA1083F00C48C28 /* EditViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditViewController.storyboard; sourceTree = "<group>"; };
+		E27F9FC82AA1163C00C48C28 /* LuggageHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuggageHeaderView.swift; sourceTree = "<group>"; };
+		E27F9FCA2AA1165400C48C28 /* LuggageHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LuggageHeaderView.xib; sourceTree = "<group>"; };
 		E2BC7E092A9A075A00D54B82 /* Packing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Packing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2BC7E0C2A9A075A00D54B82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2BC7E0E2A9A075A00D54B82 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +113,7 @@
 		E25BCB522A9F583000E8EF76 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E27F9FC72AA1161600C48C28 /* HeaderView */,
 				E27F9FBA2AA0A97D00C48C28 /* FooterView */,
 				E27F9F8F2A9FB4D700C48C28 /* Cell */,
 			);
@@ -148,6 +153,15 @@
 				E27F9FC52AA1083F00C48C28 /* EditViewController.storyboard */,
 			);
 			path = Edit;
+			sourceTree = "<group>";
+		};
+		E27F9FC72AA1161600C48C28 /* HeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				E27F9FC82AA1163C00C48C28 /* LuggageHeaderView.swift */,
+				E27F9FCA2AA1165400C48C28 /* LuggageHeaderView.xib */,
+			);
+			path = HeaderView;
 			sourceTree = "<group>";
 		};
 		E2BC7E002A9A075900D54B82 = {
@@ -265,6 +279,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E27F9FCB2AA1165400C48C28 /* LuggageHeaderView.xib in Resources */,
 				E20B87762A9DCF8F006E3F24 /* PlaceCollectionViewCell.xib in Resources */,
 				E27F9FC62AA1083F00C48C28 /* EditViewController.storyboard in Resources */,
 				E27F9FBE2AA0A9C300C48C28 /* LuggageFooterView.xib in Resources */,
@@ -286,6 +301,7 @@
 				E25BCB552A9F6C6200E8EF76 /* DataManager.swift in Sources */,
 				E20B877A2A9DD47B006E3F24 /* Category.swift in Sources */,
 				E2BC7E0D2A9A075A00D54B82 /* AppDelegate.swift in Sources */,
+				E27F9FC92AA1163C00C48C28 /* LuggageHeaderView.swift in Sources */,
 				E27F9FC42AA107F400C48C28 /* EditViewController.swift in Sources */,
 				E2BC7E0F2A9A075A00D54B82 /* SceneDelegate.swift in Sources */,
 				E27F9F8C2A9FA95700C48C28 /* Item.swift in Sources */,
