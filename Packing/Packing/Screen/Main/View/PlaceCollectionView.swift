@@ -26,8 +26,8 @@ class PlaceCollectionView: UIView {
     private func setup() {
         collectionView.delegate = self
         collectionView.dataSource = self
-        let nib = UINib(nibName: CategoryCollectionViewCell.identifier, bundle: nil)
-        collectionView.register(nib, forCellWithReuseIdentifier: CategoryCollectionViewCell.identifier)
+        let nib = UINib(nibName: PlaceCollectionViewCell.identifier, bundle: nil)
+        collectionView.register(nib, forCellWithReuseIdentifier: PlaceCollectionViewCell.identifier)
         collectionView.showsVerticalScrollIndicator = false
     }
     
@@ -49,14 +49,14 @@ class PlaceCollectionView: UIView {
 
 extension PlaceCollectionView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return dataManager.categoryList.count
+        return dataManager.placeList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryCollectionViewCell.identifier, for: indexPath) as? CategoryCollectionViewCell
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PlaceCollectionViewCell.identifier, for: indexPath) as? PlaceCollectionViewCell
         else { return UICollectionViewCell() }
     
-        cell.setup(dataManager.categoryList[indexPath.row])
+        cell.setup(dataManager.placeList[indexPath.row])
         
         return cell
     }

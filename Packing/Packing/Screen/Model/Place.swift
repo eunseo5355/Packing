@@ -8,6 +8,7 @@
 import Foundation
 
 struct Place {
+    var id: Int
     var title: String
-    var luggage: [Luggage]
+    var category: [Category]
 }

@@ -7,35 +7,45 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E20B87752A9DCF8E006E3F24 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20B87732A9DCF8E006E3F24 /* CategoryCollectionViewCell.swift */; };
-		E20B87762A9DCF8F006E3F24 /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E20B87742A9DCF8E006E3F24 /* CategoryCollectionViewCell.xib */; };
+		E20B87752A9DCF8E006E3F24 /* PlaceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20B87732A9DCF8E006E3F24 /* PlaceCollectionViewCell.swift */; };
+		E20B87762A9DCF8F006E3F24 /* PlaceCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E20B87742A9DCF8E006E3F24 /* PlaceCollectionViewCell.xib */; };
 		E20B87782A9DD44F006E3F24 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20B87772A9DD44F006E3F24 /* Place.swift */; };
-		E20B877A2A9DD47B006E3F24 /* Luggage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20B87792A9DD47B006E3F24 /* Luggage.swift */; };
+		E20B877A2A9DD47B006E3F24 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20B87792A9DD47B006E3F24 /* Category.swift */; };
 		E20B87802A9DE114006E3F24 /* PlaceCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20B877F2A9DE114006E3F24 /* PlaceCollectionView.swift */; };
 		E25BCB512A9F581700E8EF76 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25BCB502A9F581700E8EF76 /* DetailViewController.swift */; };
 		E25BCB552A9F6C6200E8EF76 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25BCB542A9F6C6200E8EF76 /* DataManager.swift */; };
 		E27F9F8C2A9FA95700C48C28 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27F9F8B2A9FA95700C48C28 /* Item.swift */; };
+		E27F9F922A9FB50F00C48C28 /* LuggageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27F9F902A9FB50F00C48C28 /* LuggageTableViewCell.swift */; };
+		E27F9F932A9FB50F00C48C28 /* LuggageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E27F9F912A9FB50F00C48C28 /* LuggageTableViewCell.xib */; };
+		E27F9FB92AA0A97500C48C28 /* LuggageFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27F9FB82AA0A97500C48C28 /* LuggageFooterView.swift */; };
+		E27F9FBE2AA0A9C300C48C28 /* LuggageFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E27F9FBD2AA0A9C300C48C28 /* LuggageFooterView.xib */; };
+		E27F9FC42AA107F400C48C28 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27F9FC32AA107F400C48C28 /* EditViewController.swift */; };
+		E27F9FC62AA1083F00C48C28 /* EditViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E27F9FC52AA1083F00C48C28 /* EditViewController.storyboard */; };
 		E2BC7E0D2A9A075A00D54B82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BC7E0C2A9A075A00D54B82 /* AppDelegate.swift */; };
 		E2BC7E0F2A9A075A00D54B82 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BC7E0E2A9A075A00D54B82 /* SceneDelegate.swift */; };
-		E2BC7E172A9A075A00D54B82 /* Packing.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E2BC7E152A9A075A00D54B82 /* Packing.xcdatamodeld */; };
 		E2BC7E192A9A075B00D54B82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2BC7E182A9A075B00D54B82 /* Assets.xcassets */; };
 		E2BC7E1C2A9A075B00D54B82 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2BC7E1A2A9A075B00D54B82 /* LaunchScreen.storyboard */; };
 		E2BC7E272A9A0DAA00D54B82 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BC7E262A9A0DAA00D54B82 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E20B87732A9DCF8E006E3F24 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
-		E20B87742A9DCF8E006E3F24 /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
+		E20B87732A9DCF8E006E3F24 /* PlaceCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceCollectionViewCell.swift; sourceTree = "<group>"; };
+		E20B87742A9DCF8E006E3F24 /* PlaceCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceCollectionViewCell.xib; sourceTree = "<group>"; };
 		E20B87772A9DD44F006E3F24 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
-		E20B87792A9DD47B006E3F24 /* Luggage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Luggage.swift; sourceTree = "<group>"; };
+		E20B87792A9DD47B006E3F24 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		E20B877F2A9DE114006E3F24 /* PlaceCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceCollectionView.swift; sourceTree = "<group>"; };
 		E25BCB502A9F581700E8EF76 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		E25BCB542A9F6C6200E8EF76 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		E27F9F8B2A9FA95700C48C28 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		E27F9F902A9FB50F00C48C28 /* LuggageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuggageTableViewCell.swift; sourceTree = "<group>"; };
+		E27F9F912A9FB50F00C48C28 /* LuggageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LuggageTableViewCell.xib; sourceTree = "<group>"; };
+		E27F9FB82AA0A97500C48C28 /* LuggageFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuggageFooterView.swift; sourceTree = "<group>"; };
+		E27F9FBD2AA0A9C300C48C28 /* LuggageFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LuggageFooterView.xib; sourceTree = "<group>"; };
+		E27F9FC32AA107F400C48C28 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		E27F9FC52AA1083F00C48C28 /* EditViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditViewController.storyboard; sourceTree = "<group>"; };
 		E2BC7E092A9A075A00D54B82 /* Packing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Packing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2BC7E0C2A9A075A00D54B82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2BC7E0E2A9A075A00D54B82 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E2BC7E162A9A075A00D54B82 /* Packing.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Packing.xcdatamodel; sourceTree = "<group>"; };
 		E2BC7E182A9A075B00D54B82 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E2BC7E1B2A9A075B00D54B82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E2BC7E1D2A9A075B00D54B82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -81,7 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				E20B87772A9DD44F006E3F24 /* Place.swift */,
-				E20B87792A9DD47B006E3F24 /* Luggage.swift */,
+				E20B87792A9DD47B006E3F24 /* Category.swift */,
 				E27F9F8B2A9FA95700C48C28 /* Item.swift */,
 				E25BCB542A9F6C6200E8EF76 /* DataManager.swift */,
 			);
@@ -91,8 +101,8 @@
 		E20B877E2A9DD527006E3F24 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				E20B87732A9DCF8E006E3F24 /* CategoryCollectionViewCell.swift */,
-				E20B87742A9DCF8E006E3F24 /* CategoryCollectionViewCell.xib */,
+				E20B87732A9DCF8E006E3F24 /* PlaceCollectionViewCell.swift */,
+				E20B87742A9DCF8E006E3F24 /* PlaceCollectionViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -110,6 +120,8 @@
 		E25BCB522A9F583000E8EF76 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E27F9FBA2AA0A97D00C48C28 /* FooterView */,
+				E27F9F8F2A9FB4D700C48C28 /* Cell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -120,6 +132,33 @@
 				E25BCB502A9F581700E8EF76 /* DetailViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		E27F9F8F2A9FB4D700C48C28 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				E27F9F902A9FB50F00C48C28 /* LuggageTableViewCell.swift */,
+				E27F9F912A9FB50F00C48C28 /* LuggageTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		E27F9FBA2AA0A97D00C48C28 /* FooterView */ = {
+			isa = PBXGroup;
+			children = (
+				E27F9FB82AA0A97500C48C28 /* LuggageFooterView.swift */,
+				E27F9FBD2AA0A9C300C48C28 /* LuggageFooterView.xib */,
+			);
+			path = FooterView;
+			sourceTree = "<group>";
+		};
+		E27F9FC12AA107C200C48C28 /* Edit */ = {
+			isa = PBXGroup;
+			children = (
+				E27F9FC32AA107F400C48C28 /* EditViewController.swift */,
+				E27F9FC52AA1083F00C48C28 /* EditViewController.storyboard */,
+			);
+			path = Edit;
 			sourceTree = "<group>";
 		};
 		E2BC7E002A9A075900D54B82 = {
@@ -162,8 +201,8 @@
 		E2BC7E242A9A0C5100D54B82 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
-				E2BC7E152A9A075A00D54B82 /* Packing.xcdatamodeld */,
 				E20B877D2A9DD4F8006E3F24 /* Model */,
+				E27F9FC12AA107C200C48C28 /* Edit */,
 				E25BCB4F2A9F57F600E8EF76 /* Detail */,
 				E2BC7E252A9A0D7400D54B82 /* Main */,
 			);
@@ -237,8 +276,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E20B87762A9DCF8F006E3F24 /* CategoryCollectionViewCell.xib in Resources */,
+				E20B87762A9DCF8F006E3F24 /* PlaceCollectionViewCell.xib in Resources */,
+				E27F9FC62AA1083F00C48C28 /* EditViewController.storyboard in Resources */,
+				E27F9FBE2AA0A9C300C48C28 /* LuggageFooterView.xib in Resources */,
 				E2BC7E1C2A9A075B00D54B82 /* LaunchScreen.storyboard in Resources */,
+				E27F9F932A9FB50F00C48C28 /* LuggageTableViewCell.xib in Resources */,
 				E2BC7E192A9A075B00D54B82 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -250,16 +292,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E27F9FB92AA0A97500C48C28 /* LuggageFooterView.swift in Sources */,
 				E25BCB512A9F581700E8EF76 /* DetailViewController.swift in Sources */,
 				E25BCB552A9F6C6200E8EF76 /* DataManager.swift in Sources */,
-				E20B877A2A9DD47B006E3F24 /* Luggage.swift in Sources */,
-				E2BC7E172A9A075A00D54B82 /* Packing.xcdatamodeld in Sources */,
+				E20B877A2A9DD47B006E3F24 /* Category.swift in Sources */,
 				E2BC7E0D2A9A075A00D54B82 /* AppDelegate.swift in Sources */,
+				E27F9FC42AA107F400C48C28 /* EditViewController.swift in Sources */,
 				E2BC7E0F2A9A075A00D54B82 /* SceneDelegate.swift in Sources */,
 				E27F9F8C2A9FA95700C48C28 /* Item.swift in Sources */,
 				E20B87802A9DE114006E3F24 /* PlaceCollectionView.swift in Sources */,
-				E20B87752A9DCF8E006E3F24 /* CategoryCollectionViewCell.swift in Sources */,
+				E20B87752A9DCF8E006E3F24 /* PlaceCollectionViewCell.swift in Sources */,
 				E2BC7E272A9A0DAA00D54B82 /* MainViewController.swift in Sources */,
+				E27F9F922A9FB50F00C48C28 /* LuggageTableViewCell.swift in Sources */,
 				E20B87782A9DD44F006E3F24 /* Place.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -470,19 +514,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		E2BC7E152A9A075A00D54B82 /* Packing.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				E2BC7E162A9A075A00D54B82 /* Packing.xcdatamodel */,
-			);
-			currentVersion = E2BC7E162A9A075A00D54B82 /* Packing.xcdatamodel */;
-			path = Packing.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = E2BC7E012A9A075900D54B82 /* Project object */;
 }
