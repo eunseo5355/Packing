@@ -11,7 +11,6 @@
 		E20B87762A9DCF8F006E3F24 /* PlaceCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E20B87742A9DCF8E006E3F24 /* PlaceCollectionViewCell.xib */; };
 		E20B87782A9DD44F006E3F24 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20B87772A9DD44F006E3F24 /* Place.swift */; };
 		E20B877A2A9DD47B006E3F24 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20B87792A9DD47B006E3F24 /* Category.swift */; };
-		E20B87802A9DE114006E3F24 /* PlaceCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20B877F2A9DE114006E3F24 /* PlaceCollectionView.swift */; };
 		E25BCB512A9F581700E8EF76 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25BCB502A9F581700E8EF76 /* DetailViewController.swift */; };
 		E25BCB552A9F6C6200E8EF76 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25BCB542A9F6C6200E8EF76 /* DataManager.swift */; };
 		E27F9F8C2A9FA95700C48C28 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27F9F8B2A9FA95700C48C28 /* Item.swift */; };
@@ -33,7 +32,6 @@
 		E20B87742A9DCF8E006E3F24 /* PlaceCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceCollectionViewCell.xib; sourceTree = "<group>"; };
 		E20B87772A9DD44F006E3F24 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		E20B87792A9DD47B006E3F24 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
-		E20B877F2A9DE114006E3F24 /* PlaceCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceCollectionView.swift; sourceTree = "<group>"; };
 		E25BCB502A9F581700E8EF76 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		E25BCB542A9F6C6200E8EF76 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		E27F9F8B2A9FA95700C48C28 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
@@ -63,13 +61,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E20B87702A9CB703006E3F24 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		E20B877B2A9DD4DC006E3F24 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -82,7 +73,6 @@
 			isa = PBXGroup;
 			children = (
 				E20B877E2A9DD527006E3F24 /* Cell */,
-				E20B877F2A9DE114006E3F24 /* PlaceCollectionView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -112,7 +102,6 @@
 			children = (
 				E25BCB532A9F583900E8EF76 /* ViewController */,
 				E25BCB522A9F583000E8EF76 /* View */,
-				E20B87702A9CB703006E3F24 /* Model */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -300,7 +289,6 @@
 				E27F9FC42AA107F400C48C28 /* EditViewController.swift in Sources */,
 				E2BC7E0F2A9A075A00D54B82 /* SceneDelegate.swift in Sources */,
 				E27F9F8C2A9FA95700C48C28 /* Item.swift in Sources */,
-				E20B87802A9DE114006E3F24 /* PlaceCollectionView.swift in Sources */,
 				E20B87752A9DCF8E006E3F24 /* PlaceCollectionViewCell.swift in Sources */,
 				E2BC7E272A9A0DAA00D54B82 /* MainViewController.swift in Sources */,
 				E27F9F922A9FB50F00C48C28 /* LuggageTableViewCell.swift in Sources */,
