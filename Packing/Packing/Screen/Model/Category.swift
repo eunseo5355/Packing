@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Category {
+struct Category: Codable {
     var title: String
     var itemList: [Item]
 }

@@ -53,6 +53,7 @@ class MainViewController: UIViewController {
     private func configUI() {
         view.backgroundColor = .white
         navigationItem.title = "Packing"
+        dataManager.loadPlaceList()
     }
     
     private func setupCollectionView() {

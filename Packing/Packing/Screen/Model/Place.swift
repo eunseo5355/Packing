@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Place {
+struct Place: Codable {
     var id: Int
     var title: String
     var category: [Category]
