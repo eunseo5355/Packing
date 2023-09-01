@@ -16,7 +16,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="361" height="73"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bm8-E6-AJq">
+                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bm8-E6-AJq">
                         <rect key="frame" x="10" y="10" width="49" height="53"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <state key="normal" title="Button"/>
@@ -27,7 +27,7 @@
                             <action selector="touchUpCheckButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="guZ-hf-Inr"/>
                         </connections>
                     </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KBV-LA-kOj">
+                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KBV-LA-kOj">
                         <rect key="frame" x="303" y="19" width="48" height="35"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <state key="normal" title="Button"/>
@@ -36,8 +36,8 @@
                             <action selector="touchUpMoreButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="7el-3l-tmg"/>
                         </connections>
                     </button>
-                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="물품" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RIV-XA-bTv">
-                        <rect key="frame" x="59" y="26" width="28" height="21"/>
+                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="물품" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RIV-XA-bTv">
+                        <rect key="frame" x="59" y="26" width="244" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
@@ -50,6 +50,7 @@
                     <constraint firstItem="bm8-E6-AJq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="SJy-ma-4hi"/>
                     <constraint firstItem="RIV-XA-bTv" firstAttribute="leading" secondItem="bm8-E6-AJq" secondAttribute="trailing" id="W8O-sC-ACD"/>
                     <constraint firstAttribute="trailing" secondItem="KBV-LA-kOj" secondAttribute="trailing" constant="10" id="XeN-Lz-xQb"/>
+                    <constraint firstItem="KBV-LA-kOj" firstAttribute="leading" secondItem="RIV-XA-bTv" secondAttribute="trailing" id="k9Q-vG-rva"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

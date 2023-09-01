@@ -27,7 +27,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="제주도" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BBH-lZ-WlT">
-                        <rect key="frame" x="10" y="146.33333333333334" width="47" height="21.666666666666657"/>
+                        <rect key="frame" x="10" y="146.33333333333334" width="140" height="21.666666666666657"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -39,6 +39,7 @@
             <constraints>
                 <constraint firstItem="BBH-lZ-WlT" firstAttribute="top" secondItem="bbF-1g-7yH" secondAttribute="bottom" constant="8" id="K5R-1t-I2d"/>
                 <constraint firstItem="bbF-1g-7yH" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="Vsh-Cs-aXF"/>
+                <constraint firstAttribute="trailing" secondItem="BBH-lZ-WlT" secondAttribute="trailing" constant="10" id="Yjc-fX-Zp8"/>
                 <constraint firstItem="bbF-1g-7yH" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="d6W-Tm-sVt"/>
                 <constraint firstAttribute="bottom" secondItem="7Nx-yR-p5c" secondAttribute="bottom" constant="10" id="dI3-Fr-b4f"/>
                 <constraint firstItem="BBH-lZ-WlT" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="dcy-g4-hzA"/>
