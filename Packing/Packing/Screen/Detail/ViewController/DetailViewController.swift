@@ -53,6 +53,8 @@ class DetailViewController: UIViewController {
         navigationController?.navigationBar.tintColor = .darkGray
         view.backgroundColor = .white
         placeLabel.text = dataManager.placeList[placeIndex].title
+        placeLabel.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
+        categoryAddButton.setContentCompressionResistancePriority(.defaultHigh, for: .horizontal)
     }
     
     private func setupTableView() {
@@ -77,7 +79,8 @@ class DetailViewController: UIViewController {
         
         NSLayoutConstraint.activate([
             placeLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
-            placeLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15)
+            placeLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15),
+            placeLabel.trailingAnchor.constraint(equalTo: categoryAddButton.leadingAnchor, constant: -10)
         ])
         
         NSLayoutConstraint.activate([
@@ -121,33 +124,33 @@ class DetailViewController: UIViewController {
         present(alert, animated: true)
     }
     
-    private func edit(_ title: String, editHandler: @escaping (() -> ()), deleteHandler: @escaping (() -> ())) {
-        guard let editViewController = UIStoryboard(name: EditViewController.identifier, bundle: nil).instantiateViewController(withIdentifier: EditViewController.identifier) as? EditViewController
-        else { return }
-        editViewController.modalPresentationStyle = .pageSheet
-        
-        if let sheetPresentationController = editViewController.presentationController as? UISheetPresentationController {
-            sheetPresentationController.detents = [.custom { _ in
-                return 250
-            }]
-            sheetPresentationController.prefersGrabberVisible = true
-            sheetPresentationController.largestUndimmedDetentIdentifier = .medium
-        }
-        
-        present(editViewController, animated: true)
-        
-        editViewController.setTitle(item: title)
-        editViewController.touchedDeleteButton = {
-            deleteHandler()
-            editViewController.dismiss(animated: true) {
-                self.luggageTableView.reloadData()
-            }
-        }
-        editViewController.touchedEditButton = {
-            editViewController.dismiss(animated: true)
-            editHandler()
-        }
-    }
+//    private func edit(_ title: String, editHandler: @escaping (() -> ()), deleteHandler: @escaping (() -> ())) {
+//        guard let editViewController = UIStoryboard(name: EditViewController.identifier, bundle: nil).instantiateViewController(withIdentifier: EditViewController.identifier) as? EditViewController
+//        else { return }
+//        editViewController.modalPresentationStyle = .pageSheet
+//
+//        if let sheetPresentationController = editViewController.presentationController as? UISheetPresentationController {
+//            sheetPresentationController.detents = [.custom { _ in
+//                return 250
+//            }]
+//            sheetPresentationController.prefersGrabberVisible = true
+//            sheetPresentationController.largestUndimmedDetentIdentifier = .medium
+//        }
+//
+//        present(editViewController, animated: true)
+//
+//        editViewController.setTitle(item: title)
+//        editViewController.touchedDeleteButton = {
+//            deleteHandler()
+//            editViewController.dismiss(animated: true) {
+//                self.luggageTableView.reloadData()
+//            }
+//        }
+//        editViewController.touchedEditButton = {
+//            editViewController.dismiss(animated: true)
+//            editHandler()
+//        }
+//    }
 
 }
 
@@ -173,17 +176,21 @@ extension DetailViewController: UITableViewDataSource {
             cell.setCheckButtonImage(self.dataManager.placeList[self.placeIndex].category[indexPath.section].itemList[indexPath.row].didPack)
             self.luggageTableView.reloadData()
         }
-        
-        cell.touchedMoreButton = { itemTitle in
-            self.edit(itemTitle) {
-                cell.editTextField()
-            } deleteHandler: {
-                self.dataManager.deleteItem(self.placeIndex, indexPath.section, indexPath.row)
-                self.luggageTableView.deleteRows(at: [indexPath], with: .fade)
-            }
 
+        cell.touchedMoreButton = { itemTitle in
+            self.present(EditViewController.showModal(itemTitle,
+                editHandler: {
+                    cell.editTextField()
+                },
+                deleteHandler: {
+                    self.dataManager.deleteItem(self.placeIndex, indexPath.section, indexPath.row)
+                    self.luggageTableView.deleteRows(at: [indexPath], with: .fade)
+                    self.luggageTableView.reloadData()
+                }),
+            animated: true)
         }
         
+        // cell의 textField 수정이 끝났을 때 실행
         cell.didEndEditing = { itemTitel in
             if itemTitel.isEmpty {
                 self.dataManager.deleteItem(self.placeIndex, indexPath.section, indexPath.row)
@@ -211,13 +218,15 @@ extension DetailViewController: UITableViewDelegate {
         headerView.setup(category: dataManager.placeList[placeIndex].category[section].title)
         
         headerView.touchedEditButton = { categoryTitle in
-            self.edit(categoryTitle) {
-                headerView.editTextField()
-            } deleteHandler: {
-                self.dataManager.deleteCategory(self.placeIndex, section)
-                self.luggageTableView.deleteSections([section], with: .fade)
-            }
-
+            self.present(EditViewController.showModal(categoryTitle,
+                editHandler: {
+                    headerView.editTextField()
+                },
+                deleteHandler: {
+                    self.dataManager.deleteCategory(self.placeIndex, section)
+                    self.luggageTableView.deleteSections([section], with: .fade)
+                    self.luggageTableView.reloadData()
+                }), animated: true)
         }
         
         headerView.didEndEditing = { categoryTitle in

@@ -125,6 +125,29 @@ extension MainViewController: UICollectionViewDataSource {
     
         cell.setup(dataManager.placeList[indexPath.row])
         
+        cell.touchedMoreButton = { placeTitle in
+            self.present(EditViewController.showModal(placeTitle,
+                editHandler: {
+                    cell.editTextField()
+                },
+                deleteHandler: {
+                    self.dataManager.deletePlace(indexPath.row)
+                    self.placeCollectionView.deleteItems(at: [indexPath])
+                    self.placeCollectionView.reloadData()
+                }), animated: true)
+        }
+        
+        cell.didEndEditing = { placeTitle, editCompletion in
+            if placeTitle.isEmpty {
+                self.dataManager.deletePlace(indexPath.row)
+                self.placeCollectionView.deleteItems(at: [indexPath])
+            } else {
+                self.dataManager.editPlaceTitle(indexPath.row, placeTitle)
+                editCompletion()
+            }
+            self.placeCollectionView.reloadData()
+        }
+        
         return cell
     }
 }

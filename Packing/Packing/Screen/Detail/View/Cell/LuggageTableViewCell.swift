@@ -36,7 +36,7 @@ class LuggageTableViewCell: UITableViewCell {
         touchedMoreButton?(itemTextField.text ?? "")
     }
     
-    func setTextField() {
+    private func setTextField() {
         itemTextField.delegate = self
         itemTextField.isEnabled = false
     }

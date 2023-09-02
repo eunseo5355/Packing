@@ -16,8 +16,9 @@
                 <rect key="frame" x="0.0" y="0.0" width="160" height="200"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.84999999999999998" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="dogCat" translatesAutoresizingMaskIntoConstraints="NO" id="bbF-1g-7yH">
-                        <rect key="frame" x="0.0" y="0.0" width="160" height="138.33333333333334"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.84999999999999998" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="bbF-1g-7yH">
+                        <rect key="frame" x="0.0" y="0.0" width="160" height="136.66666666666666"/>
+                        <color key="backgroundColor" red="0.6313356161" green="0.80000716449999998" blue="0.81960278750000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" red="0.56077861790000005" green="0.58431535960000003" blue="0.61568397279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10개의 짐" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Nx-yR-p5c">
@@ -26,25 +27,40 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="제주도" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BBH-lZ-WlT">
-                        <rect key="frame" x="10" y="146.33333333333334" width="140" height="21.666666666666657"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kr6-Yz-ozb">
+                        <rect key="frame" x="125" y="5" width="30" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="30" id="3rH-zk-CJ8"/>
+                            <constraint firstAttribute="height" constant="30" id="GS9-5l-TtZ"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" image="moreIcon">
+                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
+                        </buttonConfiguration>
+                        <connections>
+                            <action selector="touchUpMoreButton:" destination="gTV-IL-0wX" eventType="touchUpInside" id="ZxF-0K-Gv6"/>
+                        </connections>
+                    </button>
+                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="제주도" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8DY-Cb-LXn">
+                        <rect key="frame" x="10" y="144.66666666666666" width="140" height="23.333333333333343"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <color key="backgroundColor" red="0.92154707690000004" green="0.90286871170000005" blue="0.92809253169999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <constraints>
-                <constraint firstItem="BBH-lZ-WlT" firstAttribute="top" secondItem="bbF-1g-7yH" secondAttribute="bottom" constant="8" id="K5R-1t-I2d"/>
+                <constraint firstAttribute="trailing" secondItem="Kr6-Yz-ozb" secondAttribute="trailing" constant="5" id="U5D-1a-K0N"/>
                 <constraint firstItem="bbF-1g-7yH" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="Vsh-Cs-aXF"/>
-                <constraint firstAttribute="trailing" secondItem="BBH-lZ-WlT" secondAttribute="trailing" constant="10" id="Yjc-fX-Zp8"/>
+                <constraint firstItem="7Nx-yR-p5c" firstAttribute="top" secondItem="8DY-Cb-LXn" secondAttribute="bottom" constant="5" id="b8B-ZP-M50"/>
+                <constraint firstAttribute="trailing" secondItem="8DY-Cb-LXn" secondAttribute="trailing" constant="10" id="crE-Ce-YU3"/>
                 <constraint firstItem="bbF-1g-7yH" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="d6W-Tm-sVt"/>
                 <constraint firstAttribute="bottom" secondItem="7Nx-yR-p5c" secondAttribute="bottom" constant="10" id="dI3-Fr-b4f"/>
-                <constraint firstItem="BBH-lZ-WlT" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="dcy-g4-hzA"/>
-                <constraint firstItem="7Nx-yR-p5c" firstAttribute="top" secondItem="BBH-lZ-WlT" secondAttribute="bottom" constant="5" id="j7u-zo-VyS"/>
+                <constraint firstItem="8DY-Cb-LXn" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="ffN-2M-uyN"/>
+                <constraint firstItem="Kr6-Yz-ozb" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="kQj-RQ-mQP"/>
                 <constraint firstAttribute="trailing" secondItem="bbF-1g-7yH" secondAttribute="trailing" id="knE-eq-10d"/>
+                <constraint firstItem="8DY-Cb-LXn" firstAttribute="top" secondItem="bbF-1g-7yH" secondAttribute="bottom" constant="8" id="r59-Cr-FVj"/>
                 <constraint firstItem="7Nx-yR-p5c" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="vmT-C5-G5D"/>
                 <constraint firstItem="bbF-1g-7yH" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="w45-ed-kIh"/>
             </constraints>
@@ -52,12 +68,12 @@
             <connections>
                 <outlet property="imageView" destination="bbF-1g-7yH" id="uVv-sE-6MD"/>
                 <outlet property="itemCountLabel" destination="7Nx-yR-p5c" id="T3o-b6-AdD"/>
-                <outlet property="titleLabel" destination="BBH-lZ-WlT" id="rGd-7T-Rv9"/>
+                <outlet property="placeTextField" destination="8DY-Cb-LXn" id="Zvv-2p-Fhe"/>
             </connections>
-            <point key="canvasLocation" x="222.90076335877862" y="72.535211267605632"/>
+            <point key="canvasLocation" x="222.90076335877862" y="71.83098591549296"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="dogCat" width="393" height="369.66665649414062"/>
+        <image name="moreIcon" width="21" height="26"/>
     </resources>
 </document>
